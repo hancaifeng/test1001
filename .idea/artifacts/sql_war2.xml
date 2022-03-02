@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="前期准备sql:war">
+    <output-path>$PROJECT_DIR$/前期准备sql/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>前期准备sql</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="前期准备sql.war">
+      <element id="artifact" artifact-name="前期准备sql:war exploded" />
+    </root>
+  </artifact>
+</component>
