@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.dao.StudentDao">
+    <select id="select" resultType="map">
+        select
+            stu.id,c.class,stu.name
+        from
+            t_student stu
+        join
+            t_class c
+        on
+            stu.class_id = c.id
+    </select>
+
+    <select id="selectVo" resultType="org.dao.StudentVo">
+        select
+            stu.id sid,c.class cclass,stu.name sname
+        from
+            t_student stu
+        join
+            t_class c
+        on
+            stu.class_id = c.id
+    </select>
+
+    <select id="selectVoZZ" resultType="org.dao.StudentVo">
+        select
+            stu.id sid,c.class cclass,stu.name sname
+        from
+            t_student stu
+                join
+            t_class c
+            on
+                stu.class_id = c.id
+            where
+                name like '%z%'
+    </select>
+</mapper>
